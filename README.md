@@ -6,7 +6,9 @@ This will allow you to propagate the colours from the centre of a Light Field to
 For additional details and visual results, see [our webpage](https://v-sense.scss.tcd.ie/research/light-fields/a-pipeline-for-lenslet-light-field-quality-enhancement/).
 
 The additional post-processing steps presented in [1] (RAW data demultiplexing and denoising) are not present in this repository.
-You can find them respectively [here](https://github.com/V-Sense/LFToolbox-CLIM_VSENSE) and [here](https://github.com/V-Sense/LFBM5D). 
+You can find them respectively [here](https://github.com/V-Sense/LFToolbox-CLIM_VSENSE) and [here](https://github.com/V-Sense/LFBM5D).
+
+The proper order in which to use these tools is : RAW data demultiplexing --> Recolouring --> Denoising.
 
 # Usage
 
