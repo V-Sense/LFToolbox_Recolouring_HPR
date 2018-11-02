@@ -1,34 +1,24 @@
-# cpm
-A Linux version of CPM flow
+# Light Field toolbox - Recolouring step
 
-Dependencies:
+This code is mostly meant to correct colour inconsistencies in Light Field datasets taken using plenoptic cameras [1].
+This will allow you to propagate the colours from the centre of a Light Field to all the images, which will ensure you get consistent sub-aperture images accross the whole set.
 
-```
-sudo apt-get install liblapacke-dev
-sudo apt-get install libopencv-dev
-```
+For additional details and visual results, see [our webpage](https://v-sense.scss.tcd.ie/research/light-fields/a-pipeline-for-lenslet-light-field-quality-enhancement/).
 
-First, use cpm to get semi dense matches:
+The additional post-processing steps presented in [1] (RAW data demultiplexing and denoising) are not present in this repository.
+You can find them respectively [here](https://github.com/V-Sense/LFToolbox-CLIM_VSENSE) and [here](https://github.com/V-Sense/LFBM5D). 
 
-```
-./cpm img1Name img2Name outMatchName <c> <d> <r> <k> <n>
-```
+# Usage
 
-```
-c: forward-backward check flag <default: 1>
-d: grid spacing <default: 3>
-r: search radius <default: 4>
-k: pyramid levels <default: 5>
-n: iteration times <default: 6>
-```
+For simplicity's sake, we made it so that you only have to use the one file, everything else is done automatically :
+- put any number of datasets in the folder called "data"
+- at the beginning of the file "recolour_centre_neighbour.m", add/replace the paths to your datasets, assuming that the root folder is ".../data/"
+- launch the code by calling "recolour_centre_neighbour.m" ; no arguments are necessary.
 
-Then, refine the matches to flow:
+## References
 
-```
-./Match2Flow matches.txt <w> <h>
-```
+[1] P. Matysiak, M. Grogan, M. Le Pendu, M. Alain and A. Smolic, ["A Pipeline for Lenslet Light Field Quality Enhancement"](https://v-sense.scss.tcd.ie/research/light-fields/a-pipeline-for-lenslet-light-field-quality-enhancement/), International Conference on Image Processing (ICIP) 2018.
 
-```
-w: width of image <no default>
-h: height of image <no default>
-```
+[2] M. Grogan and R. Dahyot, [“Robust registration of gaussian mixtures for colour transfer”](https://arxiv.org/abs/1705.06091), ArXiv e-prints (May 2017). arXiv:cs.CV/1705.06091.
+
+[3] Y. Hu, R. Song, and Y. Li, [“Efficient coarse-to-fine patchmatch for large displacement optical flow”](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hu_Efficient_Coarse-To-Fine_PatchMatch_CVPR_2016_paper.pdf), in Proc. CVPR, 2016.

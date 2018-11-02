@@ -25,7 +25,7 @@ dataSet =   {
             % 'EPFL/Stone_Pillars_Outside__Decoded';
             % 'EPFL/Vespa__Decoded';
 
-            'INRIA/Bee_1__Decoded';
+            % 'INRIA/Bee_1__Decoded';
             % 'INRIA/Bee_2__Decoded';
             % 'INRIA/Bumblebee__Decoded';
             % 'INRIA/Cactus__Decoded';
