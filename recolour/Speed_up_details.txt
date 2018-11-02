@@ -1,0 +1,8 @@
+To speed up processing time we made some optimisation changes as follows:
+
+1. When processing each image in the light field, we passed the set of parameters that were used to recolour its neighbour to the optimisation step as initial parameters.
+This ensures that a good initial guess for the new parameters is given at the beginning of the optimisation.
+
+2. We added a two step optimisation process :
+ - the first uses a small sample of the correspondences to get a rough estimate of the parameters. We limit the number of iterations in this case to make sure it is fast. 
+ - the second refines the parameter estimation using all of the correspondences. We allow this step to run until convergence to ensure that our algorithm remains accurate. We do not re-estimate the affine parameters in this step as we found that these parameters are accurate enough after the first 'rough' estimation step.

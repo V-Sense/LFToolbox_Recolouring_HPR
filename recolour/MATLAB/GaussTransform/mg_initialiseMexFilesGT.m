@@ -1,0 +1,2 @@
+mex 'recolour/MATLAB/GaussTransform/mex_CJianCost.c' 'recolour/MATLAB/GaussTransform/CJianCost.c'
+mex 'recolour/MATLAB/GaussTransform/mex_GaussTransform.c' 'recolour/MATLAB/GaussTransform/GaussTransform.c'
