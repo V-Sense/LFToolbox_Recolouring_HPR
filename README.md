@@ -17,6 +17,8 @@ For simplicity's sake, we made it so that you only have to use the one file, eve
 - at the beginning of the file "recolour_centre_neighbour.m", add/replace the paths to your datasets, assuming that the root folder is ".../data/"
 - launch the code by calling "recolour_centre_neighbour.m" ; no arguments are necessary.
 
+Please note that the recolouring code uses OpenMP, please make sure you have the proper dependancies installed and that your compiler supports it.
+
 ## References
 
 [1] P. Matysiak, M. Grogan, M. Le Pendu, M. Alain and A. Smolic, ["A Pipeline for Lenslet Light Field Quality Enhancement"](https://v-sense.scss.tcd.ie/research/light-fields/a-pipeline-for-lenslet-light-field-quality-enhancement/), International Conference on Image Processing (ICIP) 2018.
