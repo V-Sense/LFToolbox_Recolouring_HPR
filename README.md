@@ -3,6 +3,8 @@
 This code is mostly meant to correct colour inconsistencies in Light Field datasets taken using plenoptic cameras [1].
 This will allow you to propagate the colours from the centre of a Light Field to all the images, which will ensure you get consistent sub-aperture images accross the whole set.
 
+If you use or adapt any part of this code in your work, please remember to cite the appropriate paper [1].
+
 For additional details and visual results, see [our webpage](https://v-sense.scss.tcd.ie/research/light-fields/a-pipeline-for-lenslet-light-field-quality-enhancement/).
 
 The additional post-processing steps presented in [1] (RAW data demultiplexing and denoising) are not present in this repository.
