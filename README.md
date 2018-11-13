@@ -4,6 +4,9 @@ This code is mostly meant to correct colour inconsistencies in Light Field datas
 This will allow you to propagate the colours from the centre of a Light Field to all the images, which will ensure you get consistent sub-aperture images accross the whole set.
 
 If you use or adapt any part of this code in your work, please remember to cite the appropriate paper [1].
+* Authors   : Pierre Matysiak (matysiap@scss.tcd.ie), Mairéad Grogan (mgrogan@tcd.ie)
+* Copyright : (c) 2018 [V-Sense](https://v-sense.scss.tcd.ie)
+* License   : GPL v3+, see GPLv3.txt
 
 For additional details and visual results, see [our webpage](https://v-sense.scss.tcd.ie/research/light-fields/a-pipeline-for-lenslet-light-field-quality-enhancement/).
 
